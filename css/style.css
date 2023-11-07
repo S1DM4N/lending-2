@@ -10,29 +10,29 @@
 
 body {
     font-family: 'Montserrat', sans-serif !important;
-}
-
-.px-6{
-    padding-right: 4rem!important;
-    padding-left: 4rem!important;
+    scroll-behavior: smooth;
 }
 
 .py-6 {
-    padding-top: 4rem!important;
-    padding-bottom: 4rem!important;
+    padding-top: 2rem!important;
+    padding-bottom: 2rem!important;
+}
+.px-6 {
+    padding-right: 2rem!important;
+    padding-left: 2rem!important;
 }
 
 .py-7 {
-    padding-top: 6rem!important;
-    padding-bottom: 6rem!important;
+    padding-top: 6rem !important;
+    padding-bottom: 6rem !important;
 }
 
 .mb-block {
-    margin-bottom: 100px!important;
+    margin-bottom: 100px !important;
 }
 
 h1 {
-    letter-spacing: -1.5px!important;
+    letter-spacing: -1.5px !important;
 }
 
 .rounded-4 {
@@ -40,7 +40,7 @@ h1 {
 }
 
 .hero {
-    padding: 240px 20px 245px 20px!important;
+    padding: 2rem!important;
     border-radius: 28px;
     background: var(--fill-bg, linear-gradient(0deg, rgba(243, 250, 255, 0.90) 0%, rgba(243, 250, 255, 0.90) 100%), url(../img/hero-bg.png), lightgray 50% / cover no-repeat);
 }
@@ -55,12 +55,15 @@ main {
 
 
 
-.footer-dsc, h1, .accordion button {
-    color: var(--primery)!important;
+.footer-dsc,
+h1,
+.accordion button {
+    color: var(--primery) !important;
 }
 
-p, li{
-    color: var(--secondary)!important;
+p,
+li {
+    color: var(--secondary) !important;
 }
 
 .logo-text {
@@ -69,6 +72,26 @@ p, li{
 
 .hero img {
     object-fit: cover;
+}
+
+.h1-desktop {
+    display: none;
+}
+
+.h1-table {
+    display: block;
+}
+
+.active-block {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: start !important;
+}
+
+.contacts {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: start !important;
 }
 
 .active-block {
@@ -81,19 +104,28 @@ p, li{
     background: linear-gradient(0deg, rgba(57, 78, 93, 0.80) 0%, rgba(57, 78, 93, 0.80) 100%), url(../img/contacts-bg.jpg), lightgray 50% / cover no-repeat;
 }
 
-.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
-    color: var(--white)!important;
-    background-color: var(--main)!important;
-    border-radius: .8rem!important;
-    outline: none!important;
-    border:none!important;
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:visited {
+    color: var(--white) !important;
+    background-color: var(--main) !important;
+    border-radius: .8rem !important;
+    outline: none !important;
+    border: none !important;
+    white-space: nowrap
 }
 
 .btn-primary:hover {
-    background-color: var(--btn-hover)!important;
+    background-color: var(--btn-hover) !important;
 }
 
-.nav-link, .nav-link:hover, .nav-link:active, .nav-link:visited {
+.nav-link,
+.nav-link:hover,
+.nav-link:active,
+.nav-link:visited,
+.nav-link:focus,
+.nav-link:hover {
     color: var(--primery);
 }
 
@@ -101,22 +133,27 @@ p, li{
     text-decoration: underline;
 }
 
-.accordion-item a {
-    color: var(--primery)!important;
+.accordion-collapse {
+    transition: all .3s;
 }
 
-.accordion-button, .accordion-body {
+.accordion-item a {
+    color: var(--primery) !important;
+}
+
+.accordion-button,
+.accordion-body {
     padding: 32px 24px;
 }
 
 .accordion-button {
-    color: var(--bs-accordion-btn-color)!important;
-    background-color: #ffffff00!important;
+    color: var(--bs-accordion-btn-color) !important;
+    background-color: #ffffff00 !important;
 }
 
 .accordion-item {
-    border-radius: 1.5rem!important;
-    border: 3px solid var(--primery)!important;
+    border-radius: 1.5rem !important;
+    border: 3px solid var(--primery) !important;
 }
 
 .accordion-body {
@@ -144,16 +181,19 @@ p, li{
 }
 
 .accordion-button:not(.collapsed)::after {
-    background-image: var(--bs-accordion-btn-icon);;
+    background-image: var(--bs-accordion-btn-icon);
+    ;
     transform: var(--bs-accordion-btn-icon-transform);
 }
 
-.accordion-item:first-of-type, .accordion-item:last-of-type {
+.accordion-item:first-of-type,
+.accordion-item:last-of-type {
     border-radius: 0;
 }
 
 .accordion-button::after {
     background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 9L12 19L22 9' stroke='%2330404B' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+    transition: all .2s;
 }
 
 .accordion-button:not(.collapsed)::after {
@@ -161,8 +201,107 @@ p, li{
     transform: var(--bs-accordion-btn-icon-transform);
 }
 
+.image-hero, .image-kod {
+    display: none!important;
+}
+
+header .btn, header .nav {
+    display: none;
+}
+header {
+    flex-direction: row!important;
+    justify-content: space-between;
+}
+
 /* Media */
 
-@media (min-width: 1400px) {
+@media (max-width: 576px) {
+    .container {
+        padding: 0 1rem!important;
+    }
+    .footer-nav {
+        display: none!important;
+    }
+    footer p {
+        padding:2rem 0!important;
+    }
+}
+
+@media (min-width: 576px) {
 
 }
+
+@media (min-width: 768px) {
+    .col-md-3 {
+        flex: 0 0 auto;
+        width: 30%;
+    }
+
+    .px-6 {
+        padding-right: 3rem !important;
+        padding-left: 3rem !important;
+    }
+    
+    .py-6 {
+        padding-top: 3rem !important;
+        padding-bottom: 3rem !important;
+    }
+}
+
+    @media (min-width: 992px) {
+        .h1-desktop {
+            display: block;
+        }
+        
+        .h1-table {
+            display: none;
+        }
+        .contacts {
+            display: flex!important;
+            flex-direction: row!important;
+            align-items: start !important;
+        }
+        .image-hero, .image-kod {
+            display: flex!important;
+        }
+
+        header .btn {
+           display: inline-block!important;
+        }
+
+        header .nav {
+            display: flex!important;
+        }
+        header {
+            flex-direction: row!important;
+            justify-content: space-between;
+        }
+        .hero {
+            padding: 40px 20px 40px 20px!important;
+        }
+    }
+
+    @media (min-width: 1200px) {
+        
+        .active-block {
+            display: flex!important;
+            flex-direction: row!important;
+            align-items: start !important;
+        }
+
+        .hero {
+            padding: 184px 20px 184px 20px !important;
+        }
+    }
+
+    @media (min-width: 1400px) {
+        .px-6 {
+            padding-right: 4rem !important;
+            padding-left: 4rem !important;
+        }
+        
+        .py-6 {
+            padding-top: 4rem !important;
+            padding-bottom: 4rem !important;
+        }
+    }

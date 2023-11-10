@@ -360,7 +360,11 @@ header {
 @media (min-width: 768px) {
     .col-md-3 {
         flex: 0 0 auto;
-        width: 30%;
+        width: 30%!important;
+    }
+
+    .header-menu {
+        flex-wrap: wrap!important;
     }
 
     .px-6 {
@@ -412,6 +416,17 @@ header {
         .navbar-toggler {
             display: none;
         }
+        .header-menu {
+            flex-wrap: nowrap!important;
+        }
+        
+        .col-md-3 {
+            width: auto!important;
+        }
+
+        .navbar-collapse {
+        display: none;
+        }
     }
 
     @media (min-width: 1200px) {
@@ -425,6 +440,7 @@ header {
         .hero {
             padding: 184px 20px 184px 20px !important;
         }
+
     }
 
     @media (min-width: 1400px) {

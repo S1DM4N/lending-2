@@ -322,6 +322,10 @@ footer a {
     padding: 0 1rem!important;
 }
 
+.nav-link {
+    white-space: nowrap!important;
+}
+
 /* Media */
 
 @media (max-width: 365px) {

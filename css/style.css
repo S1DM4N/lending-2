@@ -421,6 +421,7 @@ footer a {
 @media (min-width: 992px) {
     .h1-desktop {
         display: block;
+        width: 100%!important;
     }
 
     .h1-table {
@@ -493,7 +494,7 @@ footer a {
     .active-block {
         display: flex !important;
         flex-direction: row !important;
-        align-items: start !important;
+        align-items: center!important;
     }
 
     .hero {
